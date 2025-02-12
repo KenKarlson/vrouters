@@ -6,10 +6,8 @@
           <div class="navbar-content">
             <div class="logo">vue-cli</div>
             <ul class="navbar-list">
-              <li class="navbar-item"><router-link to="/">Home</router-link></li>
-              <li class="navbar-item"><router-link to="/about">About</router-link></li>
-              <li class="navbar-item"><router-link to="/contact">Contact</router-link></li>
-              <li class="navbar-item"><router-link to="/login">Login</router-link></li>
+              <li class="navbar-item" v-for="link in links" :key="link.title">
+                <router-link class="navbar-link" :title="link.title" :to="link.url">{{ link.title }}</router-link></li>
             </ul>
           </div>
         </div>
