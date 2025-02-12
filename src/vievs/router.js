@@ -9,6 +9,7 @@ import About from '../pages/About.vue';
 import Example from '../pages/Example.vue';
 import Contact from '../pages/Contact.vue';
 import Login from '@/pages/Login.vue';
+import NotFound from '@/pages/404.vue';
 
 //Routings
 export default new Router({
@@ -19,5 +20,6 @@ export default new Router({
     { path: '/example', name: 'e[ample', component: Example },
     { path: '/contact', name: 'contact', component: Contact },
     { path: '/login', name: 'login', component: Login },
+    { path: '*', name: '404', component: NotFound },
   ]
 })
